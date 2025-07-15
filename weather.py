@@ -3,9 +3,9 @@ import csv
 import os
 from datetime import datetime
 
-API_KEY = os.getenv("API_KEY_W")
+API_KEY_W = os.getenv("API_KEY_W")
 city_name = "seoul"
-url = f"https://api.openweathermap.org/data/2.5/weather?q={city_name}&appid={API_KEY}&units=metric"
+url = f"https://api.openweathermap.org/data/2.5/weather?q={city_name}&appid={API_KEY_W}&units=metric"
 response = requests.get(url)
 result = response.json()
 temp = result["main"]["temp"]
